@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name='sb_frontend',
-      version='0.1dev0',
+      version='0.1.dev0',
       description='StalkerBuster web frontend',
       author='ulif and datenzwerg.in',
       author_email='stalkerbuster@gnufix.de',
