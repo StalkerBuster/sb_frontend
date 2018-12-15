@@ -13,3 +13,24 @@
 #
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+import os
+from flask import Flask
+
+app = Flask(__name__)
+
+THEME_PATH = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "..", "..", "theme"))
+
+
+@app.route('/')
+def index():
+    return "<h1>Hello World</h1>"
+
+
+@app.route('/user/<name>')
+def user(name):
+    return "<h2>Hello %s!</h2>" % name
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
