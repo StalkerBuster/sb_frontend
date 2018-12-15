@@ -8,6 +8,5 @@ setup(name='sb_frontend',
       author='ulif and datenzwerg.in',
       author_email='stalkerbuster@gnufix.de',
       url='https://github.com/stalkerbuster/sb_frontend',
-      package_dir = {'': 'src'},
-      packages=['sb_frontend'],
+      package_dir={'': 'src'},
      )
