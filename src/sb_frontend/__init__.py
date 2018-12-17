@@ -19,7 +19,7 @@ from flask import Flask
 app = Flask(__name__)
 
 THEME_PATH = os.path.abspath(
-        os.path.join(os.path.dirname(__file__), "..", "..", "theme"))
+        os.path.join(os.path.dirname(__file__), "theme"))
 
 
 @app.route('/')
