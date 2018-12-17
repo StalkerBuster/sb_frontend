@@ -32,4 +32,4 @@ setup(name='sb_frontend',
       install_requires=['flask'],
       tests_require=['pytest'],
       cmdclass={'test': PyTest},
-     )
+      )
