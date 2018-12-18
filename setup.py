@@ -32,4 +32,9 @@ setup(name='sb_frontend',
       install_requires=['flask'],
       tests_require=['pytest'],
       cmdclass={'test': PyTest},
+      entry_points={
+          'console_scripts': [
+              'stalkerbuster = sb_frontent:main',
+              ],
+          },
       )

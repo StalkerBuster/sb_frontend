@@ -16,5 +16,5 @@
 from sb_frontend.app import app
 
 
-if __name__ == "__main__":
+def main(args=None):
     app.run(debug=True)
