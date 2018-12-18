@@ -1,6 +1,6 @@
-# tests for sb_frontend
+# tests for app.py
 import os
-from sb_frontend import THEME_PATH
+from sb_frontend.app import THEME_PATH
 
 
 def test_theme_path_exists():
