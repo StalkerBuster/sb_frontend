@@ -34,7 +34,7 @@ setup(name='sb_frontend',
       cmdclass={'test': PyTest},
       entry_points={
           'console_scripts': [
-              'stalkerbuster = sb_frontent:main',
+              'stalkerbuster = sb_frontend:main',
               ],
           },
       )
