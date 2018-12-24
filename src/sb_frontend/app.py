@@ -28,8 +28,3 @@ THEME_PATH = os.path.abspath(
 @app.route('/')
 def index():
     return "<h1>Hello World</h1>"
-
-
-@app.route('/user/<name>')
-def user(name):
-    return "<h2>Hello %s!</h2>" % name
