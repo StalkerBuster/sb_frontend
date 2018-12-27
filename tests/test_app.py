@@ -13,6 +13,12 @@ def test_static_content_available():
     assert resp.status == "200 OK"
 
 
+def test_root_cert_downloadable():
+    # we can download a root cert
+    resp = app.test_client().get("/sb-root.crt")
+    assert resp.status == "200 OK"
+
+
 def test_app_root_reachable():
     # ensure, the root of our web app can be reached
     resp = app.test_client().get("/")
