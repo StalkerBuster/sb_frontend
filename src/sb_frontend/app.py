@@ -1,4 +1,3 @@
-
 #  sb_frontend -- web frontend for stalkerbuster
 #  Copyright (C) 2018  StalkerBuster
 #
@@ -28,3 +27,8 @@ THEME_PATH = os.path.abspath(
 @app.route('/')
 def index():
     return "<h1>Hello World</h1>"
+
+
+@app.route('/sb-root.crt')
+def sb_root_crt():
+    return ""
