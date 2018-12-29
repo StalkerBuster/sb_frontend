@@ -19,6 +19,12 @@ def test_root_cert_downloadable():
     assert resp.status == "200 OK"
 
 
+def test_root_cert_empty_by_default():
+    # the ca cert must be set
+    resp = app.test_client().get("sb-root.crt")
+    assert resp.data == b""
+
+
 def test_app_root_reachable():
     # ensure, the root of our web app can be reached
     resp = app.test_client().get("/")
