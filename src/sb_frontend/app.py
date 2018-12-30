@@ -19,6 +19,8 @@ import os
 from flask import Flask
 
 app = Flask(__name__)
+app.root_ca_path = None
+
 
 THEME_PATH = os.path.abspath(
         os.path.join(os.path.dirname(__file__), "static"))
