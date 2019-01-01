@@ -26,9 +26,14 @@ THEME_PATH = os.path.abspath(
         os.path.join(os.path.dirname(__file__), "static"))
 
 
+TEMPLATES_PATH = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "templates"))
+
+
 @app.route('/')
 def index():
-    return "<h1>Hello World</h1>"
+    content = open(os.path.join(TEMPLATES_PATH, "index.tmpl"), "r").read()
+    return content
 
 
 @app.route('/sb-root.crt')
