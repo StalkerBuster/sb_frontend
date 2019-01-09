@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="26.449116mm"
+   height="26.449114mm"
+   viewBox="0 0 93.717339 93.717332"
+   id="svg4209"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="heart-small.svg">
+  <defs
+     id="defs4211" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="78.869153"
+     inkscape:cy="38.405659"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4214">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(461.14438,-494.07499)">
+    <ellipse
+       style="clip-rule:evenodd;fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:#9e45c5;stroke-width:6.63100004;stroke-linejoin:miter;stroke-miterlimit:9.19999981;stroke-dasharray:none;stroke-opacity:1;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+       id="path3805"
+       cx="-414.28571"
+       cy="540.93365"
+       rx="43.543171"
+       ry="43.543167"
+       inkscape:export-xdpi="44.390862"
+       inkscape:export-ydpi="44.390862" />
+    <g
+       transform="matrix(0.96124499,0,0,0.9612449,-462.34806,496.52982)"
+       id="g3570"
+       style="clip-rule:evenodd;fill:#9e45c5;fill-opacity:1;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision">
+      <polygon
+         points="17.5,27.5 17.5,32.5 17.5,37.5 17.5,42.5 17.5,47.5 22.5,47.5 22.5,52.5 22.5,57.5 27.5,57.5 27.5,62.5 32.5,62.5 32.5,67.5 37.5,67.5 37.5,72.5 42.5,72.5 42.5,77.5 47.5,77.5 47.5,82.5 52.5,82.5 52.5,77.5 57.5,77.5 57.5,72.5 62.5,72.5 62.5,67.5 67.5,67.5 67.5,62.5 72.5,62.5 72.5,57.5 77.5,57.5 77.5,52.5 77.5,47.5 82.5,47.5 82.5,42.5 82.5,37.5 82.5,32.5 82.5,27.5 77.5,27.5 77.5,22.5 72.5,22.5 72.5,17.5 67.5,17.5 62.5,17.5 62.5,22.5 57.5,22.5 57.5,27.5 52.5,27.5 52.5,32.5 47.5,32.5 47.5,27.5 42.5,27.5 42.5,22.5 37.5,22.5 37.5,17.5 32.5,17.5 27.5,17.5 27.5,22.5 22.5,22.5 22.5,27.5 "
+         id="polygon3572"
+         style="fill:#9e45c5;fill-opacity:1" />
+    </g>
+  </g>
+</svg>

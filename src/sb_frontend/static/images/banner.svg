@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="154.43918mm"
+   height="26.069025mm"
+   viewBox="0 0 547.22544 92.370561"
+   id="svg3348"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="banner.svg"
+   inkscape:export-filename="/home/uli/Workshop/sb/website/static/images/banner.png"
+   inkscape:export-xdpi="44.390862"
+   inkscape:export-ydpi="44.390862">
+  <defs
+     id="defs3350" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="282.02683"
+     inkscape:cy="-99.89811"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3353">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(1135.8806,-119.99614)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:27.97144699px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-1030.2892"
+       y="162.60889"
+       id="text3364"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="47.204182"
+       inkscape:export-ydpi="47.204182"><tspan
+         sodipodi:role="line"
+         id="tspan3366"
+         x="-1030.2892"
+         y="162.60889"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:55.94289398px;line-height:125%;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">StalkerBuster</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-1029.0262"
+       y="202.9783"
+       id="text4207"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="47.204182"
+       inkscape:export-ydpi="47.204182"><tspan
+         sodipodi:role="line"
+         id="tspan4209"
+         x="-1029.0262"
+         y="202.9783"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Roboto Slab';-inkscape-font-specification:'Roboto Slab, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Defend your digital self</tspan></text>
+    <g
+       style="clip-rule:evenodd;fill:#000000;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+       id="g3770"
+       transform="matrix(0.09176458,0.09216785,-0.09216787,0.09176458,-1090.9955,101.07247)"
+       inkscape:export-xdpi="47"
+       inkscape:export-ydpi="47">
+      <path
+         class="fil0"
+         d="M 541,574 C 475,605 364,610 306,593 451,572 538,589 575,422 586,334 622,126 549,63 488,-7 244,-35 148,66 63,145 104,312 135,405 101,377 73,309 82,234 c -186,28 -12,324 105,348 1,4 -11,128 62,135 0,4 115,5 194,6 93,0 93,-70 98,-149 z"
+         id="path3772"
+         inkscape:connector-curvature="0"
+         style="fill:#000000" />
+    </g>
+    <circle
+       style="clip-rule:evenodd;fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.47973144;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+       id="path3805-4"
+       cx="-1081.9202"
+       cy="154.84337"
+       r="21.318167"
+       inkscape:export-xdpi="47"
+       inkscape:export-ydpi="47" />
+    <g
+       transform="matrix(0.47061299,0,0,0.47061296,-1105.4508,132.58126)"
+       id="g3570-7"
+       style="clip-rule:evenodd;fill:#9e45c5;fill-opacity:1;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+       inkscape:export-xdpi="47"
+       inkscape:export-ydpi="47">
+      <polygon
+         points="77.5,27.5 77.5,22.5 72.5,22.5 72.5,17.5 67.5,17.5 62.5,17.5 62.5,22.5 57.5,22.5 57.5,27.5 52.5,27.5 52.5,32.5 47.5,32.5 47.5,27.5 42.5,27.5 42.5,22.5 37.5,22.5 37.5,17.5 32.5,17.5 27.5,17.5 27.5,22.5 22.5,22.5 22.5,27.5 17.5,27.5 17.5,32.5 17.5,37.5 17.5,42.5 17.5,47.5 22.5,47.5 22.5,52.5 22.5,57.5 27.5,57.5 27.5,62.5 32.5,62.5 32.5,67.5 37.5,67.5 37.5,72.5 42.5,72.5 42.5,77.5 47.5,77.5 47.5,82.5 52.5,82.5 52.5,77.5 57.5,77.5 57.5,72.5 62.5,72.5 62.5,67.5 67.5,67.5 67.5,62.5 72.5,62.5 72.5,57.5 77.5,57.5 77.5,52.5 77.5,47.5 82.5,47.5 82.5,42.5 82.5,37.5 82.5,32.5 82.5,27.5 "
+         id="polygon3572-6"
+         style="fill:#9e45c5;fill-opacity:1" />
+    </g>
+  </g>
+</svg>
