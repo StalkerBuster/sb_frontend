@@ -35,6 +35,10 @@ def index():
     content = open(os.path.join(TEMPLATES_PATH, "index.tmpl"), "r").read()
     return content
 
+@app.route('/about')
+def about():
+    content = open(os.path.join(TEMPLATES_PATH, "about.tmpl"), "r").read()
+    return content
 
 @app.route('/sb-root.crt')
 def sb_root_crt():
