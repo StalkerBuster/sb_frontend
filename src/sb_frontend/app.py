@@ -17,7 +17,7 @@
 """
 import os
 from flask import Flask
-from flask import Flask, flash, redirect, render_template, request, session, abort, make_response
+from flask import Flask, flash, redirect, render_template, request, session, abort, make_response, url_for
 
 app = Flask(__name__)
 app.root_ca_path = None
@@ -38,7 +38,7 @@ def index():
     if not session.get('logged_in'):
         return render_template('login.html')
     else:
-        return content
+        return render_template('index.tmpl')
 
 @app.route('/about')
 def about():
@@ -47,16 +47,20 @@ def about():
 
 @app.route('/login', methods=['POST'])
 def do_admin_login():
+    error = None
     if request.form['password'] == 'password' and request.form['username'] == 'admin':
         session['logged_in'] = True 
+        flash('You were successfully logged in.')
+        return redirect(url_for('index'))
     else:
-        flash('wrong password')
-    return index() 
+        flash('WRONG PASSWORD. TRY AGAIN!')
+    return render_template('login.html', error=error)
 
 @app.route('/logout')
 def logout():
     session['logged_in'] = False
-    return index()
+    flash('You are now logged out.')
+    return render_template('login.html')
 
 @app.route('/setcookie', methods = ['POST', 'GET'])
 def setcookie():

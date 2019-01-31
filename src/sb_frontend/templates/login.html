@@ -1,3 +1,5 @@
+
+
 <link rel="stylesheet" href="/static/assets/css/main.css" type="text/css">
 	<!-- Main -->
 					<div id="main">
@@ -6,22 +8,22 @@
 
 		<!-- Header -->
 								<header id="header">
-									<a class="logo"><img src="/static/images/banner.png" alt="" /></a>
-							
-								</header>
-
-
+								  <a class="logo"><img src="/static/images/banner.png" alt="" /></a>
+								  </header>
+<br>
+	{% extends "layout.tmpl" %}
 {% block body %}
-{% if session['logged_in'] %}
+								<!--{% if session['logged_in'] %}
  
-You're logged in already!
+    You're logged in already!							
+								
  
-{% else %}
+    {% else %}-->
+
 <form action="/login" action= "/setcookie" method="POST">
   <div class="login">
     <div class="row gtr-uniform">
       <div class="col-6 col-12-xsmall">
-	
       <div class="app-title">
 	<h1>Login<h1>
       </div>        
@@ -44,5 +46,5 @@ You're logged in already!
 </form>{% endif %}
 </div>
   </div>
-{% endblock %}
 
+{% endblock %}
