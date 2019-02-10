@@ -37,8 +37,8 @@ def index():
     content = open(os.path.join(TEMPLATES_PATH, "index.tmpl"), "r").read()
     if not session.get('logged_in'):
         return render_template('login.html')
-    else:
-        return render_template('index.tmpl')
+    scan_running = session.get('scan_started')
+    return render_template('index.tmpl')
 
 @app.route('/about')
 def about():
@@ -49,7 +49,8 @@ def about():
 def do_admin_login():
     error = None
     if request.form['password'] == 'password' and request.form['username'] == 'admin':
-        session['logged_in'] = True 
+        session['logged_in'] = True
+        session['username'] = request.form['username']
         flash('You were successfully logged in.')
         return redirect(url_for('index'))
     else:
@@ -61,19 +62,6 @@ def logout():
     session['logged_in'] = False
     flash('You are now logged out.')
     return render_template('login.html')
-
-@app.route('/setcookie', methods = ['POST', 'GET'])
-def setcookie():
-    if request.method == 'POST':
-        user = request.form['username']
-        resp = make_response(render_template('readcookie.html'))
-        resp.set_cookie('SID', user)
-        return resp
-
-@app.route('/getcookie')
-def getcookie():
-    name = request.cookies.get('SID')
-    return '<h1>welcome '+username+'</h1>'
 
 
 @app.route('/sb-root.crt')
