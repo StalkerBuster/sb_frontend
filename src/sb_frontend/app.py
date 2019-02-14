@@ -34,7 +34,6 @@ TEMPLATES_PATH = os.path.abspath(
 
 @app.route('/')
 def index():
-    content = open(os.path.join(TEMPLATES_PATH, "index.tmpl"), "r").read()
     if not session.get('logged_in'):
         return render_template('login.html')
     scan_running = session.get('scan_started')
@@ -42,26 +41,27 @@ def index():
 
 @app.route('/about')
 def about():
-    content = open(os.path.join(TEMPLATES_PATH, "about.tmpl"), "r").read()
-    return content
+    return render_template('about.tmpl')
 
-@app.route('/login', methods=['POST'])
-def do_admin_login():
-    error = None
-    if request.form['password'] == 'password' and request.form['username'] == 'admin':
+@app.route('/login', methods=['POST', 'GET'])
+def login():
+    username = request.form.get('username', None)
+    password = request.form.get('password', None)
+    if password == 'password' and username == 'admin':
         session['logged_in'] = True
-        session['username'] = request.form['username']
+        session['username'] = username
         flash('You were successfully logged in.')
         return redirect(url_for('index'))
     else:
-        flash('WRONG PASSWORD. TRY AGAIN!')
-    return render_template('login.html', error=error)
+        if 'username' in request.form:
+            flash('WRONG PASSWORD. TRY AGAIN!')
+    return render_template('login.html', error=None)
 
 @app.route('/logout')
 def logout():
     session['logged_in'] = False
     flash('You are now logged out.')
-    return render_template('login.html')
+    return redirect(url_for('login'))
 
 
 @app.route('/sb-root.crt')
