@@ -5,15 +5,25 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license) -->
 
 	{% extends "layout.tmpl" %}
-						{% block body %}									
+{% block body %}
+
 <br>
 <h2>Welcome to StalkerBuster</h2>
 											<p>A tool to scan the network traffic of your phone</p>										  
 										
 										<p><span class="image right"><img src="static/images/logo.svg" alt="" /></span>StalkerBuster scans the network traffic of your phone and can provide hints, if something unusual is going on. If you consent that your phone is being scanned, please press the button below.</p>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Scan your phone</a></li>
-										</ul>
+
+
+
+<ul class="actions">
+  <li><a href="/scan" class="button primary">
+  {% if session["scan_started"] %}
+       Scan in progress...
+    {% else %}
+        Scan your phone
+    {% endif %}
+    </a></li>
+</ul>
 <br><br><br>								
 							
 

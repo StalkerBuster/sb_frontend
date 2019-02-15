@@ -15,9 +15,9 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """Flask app.
 """
-import os
+import os, time
 from flask import Flask
-from flask import Flask, flash, redirect, render_template, request, session, abort, make_response, url_for
+from flask import Flask, flash, redirect, render_template, request, session, abort, make_response, url_for, Response
 
 app = Flask(__name__)
 app.root_ca_path = None
@@ -42,6 +42,16 @@ def index():
 @app.route('/about')
 def about():
     return render_template('about.tmpl')
+
+@app.route('/scan', methods=['POST', 'GET'])
+def scan():
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    session['scan_started'] = True
+    if "stop" in request.form.keys() or "results" in request.form.keys():
+        session['scan_started'] = False
+    return render_template('scan.html')
+
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
