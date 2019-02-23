@@ -1,5 +1,5 @@
 #  sb_frontend -- web frontend for stalkerbuster
-#  Copyright (C) 2018  StalkerBuster
+#  Copyright (C) 2019  StalkerBuster
 #
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published
@@ -14,7 +14,9 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 from sb_frontend.app import app
+import os
 
 
 def main(args=None):
-    app.run(debug=True)
+    app.secret_key = os.urandom(12)
+    app.run(debug=True, host='0.0.0.0', port=5000)
