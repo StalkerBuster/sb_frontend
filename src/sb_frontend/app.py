@@ -1,5 +1,5 @@
 #  sb_frontend -- web frontend for stalkerbuster
-#  Copyright (C) 2018  StalkerBuster
+#  Copyright (C) 2019  StalkerBuster
 #
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published

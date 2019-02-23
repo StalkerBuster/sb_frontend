@@ -36,3 +36,90 @@
   {% endif %}
 {% endwith %}
 {% block body %}{% endblock %}
+
+{% block settings %}
+									
+				<!-- Sidebar -->
+
+				<div id="sidebar">
+						<div class="inner">
+
+
+<!-- Menu -->
+
+								<nav id="menu">
+									<header class="major">
+										<h2>Settings</h2>
+									</header>
+									<ul>
+
+<li>
+<span class="opener"><h4>IP</h4></span>
+											<ul>
+												<h4>Please enter your IP-address</h4>
+		<form method="post" action="#">
+														<div class="row gtr-uniform">
+															<div class="col-8 col-12-xsmall">
+																<input type="text" name="demo-IP" id="demo-IP" value="" placeholder="IP address" />
+															</div>
+														</div>
+												</form>										
+											</ul>
+</li>
+<li>												<span class="opener"><h4>DNS</h4></span>
+
+		<ul>
+											   	<h4>Please enter a DNS:</h4>
+
+													<form method="post" action="#">
+														<div class="row gtr-uniform">
+															<div class="col-8 col-12-xsmall">
+																<input type="text" name="demo-IP" id="demo-IP" value="" placeholder="DNS" />
+															</div>
+																								</div>
+													</form>	
+		</ul>
+</li>
+
+<li>
+	<span class="opener"><h4>SSID</h4></span>
+												<ul>
+											   	<h4>Please enter an SSID:</h4>
+
+													<form method="post" action="#">
+														<div class="row gtr-uniform">
+															<div class="col-8 col-12-xsmall">
+																<input type="text" name="demo-IP" id="demo-IP" value="" placeholder="SSID" />
+															</div>			
+														</div>
+												</form>									</ul>
+												</li>
+										
+									</ul>
+
+</nav>
+
+
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; StalkerBuster. Petra Hagemann and Uli Fouquet GbR. All rights reserved. Design: HTML5 UP.</p>
+								</footer>
+
+						
+					</div>
+</div></div></div>
+{% endblock %}
+    
+    
+    {% block scripts %}
+    	<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/browser.min.js"></script>
+			<script src="/static/assets/js/breakpoints.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+    {% endblock %}
+
+	</body>
+</html>
