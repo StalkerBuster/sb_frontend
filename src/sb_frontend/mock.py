@@ -19,7 +19,7 @@ Components to simulate real-world hardware env.
 """
 class SB_Mock(object):
     uplink_up = False
-    
+
     def get_avail_wlans(self):
         return ["my honeypot", "WifiOnICE", "aiport1"]
 
@@ -30,10 +30,8 @@ class SB_Mock(object):
             return False
         self.wlan = ssid
         self.uplink_up = True
-        return True        
-    
+        return True
+
     def unselect_wlan(self):
         self.wlan = None
         self.uplink_up = False
-
-    
