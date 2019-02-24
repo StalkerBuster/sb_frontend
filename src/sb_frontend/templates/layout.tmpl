@@ -1,125 +1,122 @@
 <!DOCTYPE HTML>
 <!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-  -->
+		Editorial by HTML5 UP
+		html5up.net | @ajlkn
+		Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	-->
 <html>
 	<head>
-	  <title>StalkerBuster</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<title>StalkerBuster</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/static/assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
 {% if session["logged_in"] %}
-	   <p class="actions" align="right"><a href="/logout" class="button">Logout</a></p>
+					<p class="actions" align="right"><a href="/logout" class="button">Logout</a></p>
 {% endif %}
-							<!-- Header -->
-								<header id="header">
-									<a class="logo"><img src="/static/images/banner.png" alt="" /></a>
-								</header>
+					<!-- Header -->
+					<header id="header">
+						<a class="logo"><img src="/static/images/banner.png" alt="" /></a>
+					</header>
 
 {% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <br />
-    {% for message in messages %}
-    <div class="warning">{{ message }}</div>
-    {% endfor %}
-  {% endif %}
+	{% if messages %}
+					<br />
+		{% for message in messages %}
+					<div class="warning">{{ message }}</div>
+		{% endfor %}
+	{% endif %}
 {% endwith %}
+
 {% block body %}{% endblock %}
 
 {% block settings %}
-									
-				<!-- Sidebar -->
-
-				<div id="sidebar">
+					<!-- Sidebar -->
+					<div id="sidebar">
 						<div class="inner">
 
+							<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Settings</h2>
+								</header>
+								<ul>
 
-<!-- Menu -->
-
-								<nav id="menu">
-									<header class="major">
-										<h2>Settings</h2>
-									</header>
+									<li>
+									<span class="opener"><h4>IP</h4></span>
 									<ul>
-
-<li>
-<span class="opener"><h4>IP</h4></span>
-											<ul>
-												<h4>Please enter your IP-address</h4>
-		<form method="post" action="#">
-														<div class="row gtr-uniform">
-															<div class="col-8 col-12-xsmall">
-																<input type="text" name="demo-IP" id="demo-IP" value="" placeholder="IP address" />
-															</div>
-														</div>
-												</form>										
-											</ul>
-</li>
-<li>												<span class="opener"><h4>DNS</h4></span>
-
-		<ul>
-											   	<h4>Please enter a DNS:</h4>
-
-													<form method="post" action="#">
-														<div class="row gtr-uniform">
-															<div class="col-8 col-12-xsmall">
-																<input type="text" name="demo-IP" id="demo-IP" value="" placeholder="DNS" />
-															</div>
-																								</div>
-													</form>	
-		</ul>
-</li>
-
-<li>
-	<span class="opener"><h4>SSID</h4></span>
-												<ul>
-											   	<h4>Please enter an SSID:</h4>
-
-													<form method="post" action="#">
-														<div class="row gtr-uniform">
-															<div class="col-8 col-12-xsmall">
-																<input type="text" name="demo-IP" id="demo-IP" value="" placeholder="SSID" />
-															</div>			
-														</div>
-												</form>									</ul>
-												</li>
-										
+										<h4>Please enter your IP-address</h4>
+										<form method="post" action="#">
+											<div class="row gtr-uniform">
+												<div class="col-8 col-12-xsmall">
+													<input type="text" name="demo-IP" id="demo-IP" value="" placeholder="IP address" />
+												</div>
+											</div>
+										</form>
 									</ul>
+									</li>
 
-</nav>
+									<li>
+									<span class="opener"><h4>DNS</h4></span>
+									<ul>
+										<h4>Please enter a DNS:</h4>
+										<form method="post" action="#">
+											<div class="row gtr-uniform">
+												<div class="col-8 col-12-xsmall">
+													<input type="text" name="demo-IP" id="demo-IP" value="" placeholder="DNS" />
+												</div>
+											</div>
+										</form>
+									</ul>
+									</li>
 
+									<li>
+									<span class="opener"><h4>SSID</h4></span>
+									<ul>
+										<h4>Please enter an SSID:</h4>
 
+										<form method="post" action="#">
+											<div class="row gtr-uniform">
+												<div class="col-8 col-12-xsmall">
+													<input type="text" name="demo-IP" id="demo-IP" value="" placeholder="SSID" />
+												</div>
+											</div>
+										</form>
+									</ul>
+									</li>
+
+								</ul>
+							</nav>
 
 							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; StalkerBuster. Petra Hagemann and Uli Fouquet GbR. All rights reserved. Design: HTML5 UP.</p>
-								</footer>
+							<footer id="footer">
+								<p class="copyright">&copy; StalkerBuster. Petra Hagemann and Uli Fouquet GbR. All rights reserved. Design: HTML5 UP.</p>
+							</footer>
 
-						
+						</div>
 					</div>
-</div></div></div>
-{% endblock %}
-    
-    
-    {% block scripts %}
-    	<!-- Scripts -->
+{% endblock %} <!-- /settings -->
+
+				</div>
+			</div>
+
+{% block scripts %}
+			<!-- Scripts -->
 			<script src="/static/assets/js/jquery.min.js"></script>
 			<script src="/static/assets/js/browser.min.js"></script>
 			<script src="/static/assets/js/breakpoints.min.js"></script>
 			<script src="/static/assets/js/util.js"></script>
 			<script src="/static/assets/js/main.js"></script>
-    {% endblock %}
+{% endblock %}
 
+		</div>
 	</body>
 </html>
