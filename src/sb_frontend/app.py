@@ -52,6 +52,14 @@ def scan():
         session['scan_started'] = False
     return render_template('scan.html')
 
+@app.route('/results', methods=['POST', 'GET'])
+def results():
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    session['scan_started'] = True
+    if "stop" in request.form.keys() or "results" in request.form.keys():
+        session['scan_started'] = False
+    return render_template('results.html')
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():

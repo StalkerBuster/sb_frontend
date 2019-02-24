@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license) -->
+
+	{% extends "layout.tmpl" %}
+{% block body %}
+
+<br><br>
+<form method="POST" action="/scan">
+<h2>Results of the scanning process</h2></p>
+<br><br>
+<p>The following data were sent to suspicious destinations.</p>
+	<div class="table-wrapper">
+														<table>
+															<thead>
+																<tr>
+																	<th>No.</th>
+																	<th>Description</th>
+																	<th>Destination</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>1</td>
+																	<td>GPS location sent.</td>
+																	<td>evilspy.com</td>
+																</tr>
+																<tr>
+																	<td>2</td>
+																	<td>Voice data transferred.</td>
+																	<td>spy.de</td>
+																</tr>
+																<tr>
+																	<td>3</td>
+																	<td> Transfer of Whatsapp messages.</td>
+																	<td>ex.com</td>
+																</tr>
+																<tr>
+																	<td>4</td>
+																	<td>Forwarding of emails.</td>
+																	<td>exboyfriend.ex</td>
+																</tr>
+																<tr>
+																	<td>5</td>
+																	<td>Transmission of photos.</td>
+																	<td>stalker.com</td>
+																</tr>
+															</tbody>
+															</table>
+													</div>
+
+	<!-- Box -->
+													<h3>Important Notice</h3>
+													<div class="box">
+													  <p>Please note that the results of the StalkerBuster scan are only <b>first hints</b> about unusual network traffic on your device. Please be aware that these are <b>no proofs</b> for you being stalked. To find more evidences a detailed network traffic analysis is necessary.
+<br>Please contact FRIEDA or any other advisory center for domestic abuse to discuss further steps that can be taken.</p>
+													</div>									
+
+<br><br>					
+
+<ul class="actions">
+  <li>
+      <input type="submit" name="resume" value="Resume Scan" class="primary btn btn-primary btn-large btn-block">
+</li>		
+</ul>
+</form>
+  <br><br>
+  <ul class="actions">
+ <li><a href="/" class="button big">Home</a>
+
+  </li></ul>
+  	</section>
+					</div>
+					</div>
+
+
+{% endblock %}

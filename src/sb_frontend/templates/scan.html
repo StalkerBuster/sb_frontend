@@ -8,23 +8,26 @@
 {% block body %}
 
 <br><br>
-<form method="POST">
+
 <p><span class="image">
 {% if session["scan_started"] %}
 <img src="static/images/ajax-loader.gif" alt="" /></span><h2>Scanning in progress...</h2></p>
 <ul class="actions">
-  <li>
-      <input type="submit" name="stop" value="Stop scan" class="primary btn btn-primary btn-large btn-block">
+  <li><form method="POST" action="/scan">
+      <input type="submit" name="stop" value="Stop scan" class="primary btn btn-primary btn-large btn-block"></form>
     {% else %}
     <img src="static/images/loader_stopped.png" alt="" /></span><h2>Scan stopped</h2></p>
 <ul class="actions"><li>
-    <input type="submit" name="results" value="Show Results" class="primary btn btn-primary btn-large btn-block"></li>
+<form method="POST" action="/results">
+    <input type="submit" name="results" value="Show Results" class="primary btn btn-primary btn-large btn-block"></form></li>
   <li>
-      <input type="submit" name="resume" value="Resume Scan" class="primary btn btn-primary btn-large btn-block">
+    <form method="POST" action="/scan">
+      <input type="submit" name="resume" value="Resume Scan" class="primary btn btn-primary btn-large btn-block"></form>
+      
     {% endif %}
 </li>		
 </ul>
-</form>
+
 
   <br><br>
   <ul class="actions">
