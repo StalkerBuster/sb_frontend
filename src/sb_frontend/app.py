@@ -78,6 +78,7 @@ def login():
 @app.route('/logout')
 def logout():
     session['logged_in'] = False
+    session['scan_started'] = False
     flash('You are now logged out.')
     return redirect(url_for('login'))
 
