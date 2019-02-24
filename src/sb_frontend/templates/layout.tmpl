@@ -79,18 +79,23 @@
 									</li>
 
 									<li>
-									<span class="opener"><h4>SSID</h4></span>
-									<ul>
-										<h4>Please enter an SSID:</h4>
+										<span class="opener"><h4>WLAN</h4></span>
+										<ul>
+											<div class="col-8">Not connected</div>
 
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-8 col-12-xsmall">
-													<input type="text" name="demo-IP" id="demo-IP" value="" placeholder="SSID" />
+											<form method="post">
+												<div class="row gAAAtr-uniform">
+													<div class="col-8 col-12-xsmall">
+														<select name="ssid" id="ssid-select">
+															<option value="ssid_1">My Network</option>
+															<option value="ssid_2">Other Network</option>
+														</select>
+														<input type="password" name="ssid_password" id="ssid-pw" value="" placeholder="WLAN password" />
+														<input type="submit" name="submit-settings-wlan" value="Connect..." class="btn btn-primary primary" />
+													</div>
 												</div>
-											</div>
-										</form>
-									</ul>
+											</form>
+										</ul>
 									</li>
 
 								</ul>
