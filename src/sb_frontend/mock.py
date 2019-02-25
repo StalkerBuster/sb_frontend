@@ -17,21 +17,30 @@
 """
 Components to simulate real-world hardware env.
 """
-class SB_Mock(object):
+uplink_up = False
+curr_wlan = None
+
+
+def get_avail_wlans():
+    return ["my honeypot", "WifiOnICE", "aiport1"]
+
+
+def get_current_wlan():
+    return curr_wlan
+
+
+def select_wlan(ssid, password):
+    global curr_wlan, uplink_up
+    if not ssid in get_avail_wlans():
+        return False
+    if password != "123456":
+        return False
+    curr_wlan = ssid
+    uplink_up = True
+    return True
+
+
+def unselect_wlan():
+    global curr_wlan, uplink_up
+    curr_wlan = None
     uplink_up = False
-
-    def get_avail_wlans(self):
-        return ["my honeypot", "WifiOnICE", "aiport1"]
-
-    def select_wlan(self, ssid, password):
-        if not ssid in self.get_avail_wlans():
-            return False
-        if password != "123456":
-            return False
-        self.wlan = ssid
-        self.uplink_up = True
-        return True
-
-    def unselect_wlan(self):
-        self.wlan = None
-        self.uplink_up = False
