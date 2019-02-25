@@ -33,14 +33,14 @@ TEMPLATES_PATH = os.path.abspath(
 
 
 @app.route('/')
-def index():
+def index(methods=['POST', 'GET']):
     if not session.get('logged_in'):
         return render_template('login.html')
     scan_running = session.get('scan_started')
     return render_template('index.tmpl')
 
 
-@app.route('/about')
+@app.route('/about', methods=['POST', 'GET'])
 def about():
     return render_template('about.tmpl')
 
