@@ -15,7 +15,7 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """Flask app.
 """
-import os, time
+import os
 from flask import (
     Flask, flash, redirect, render_template, request, session, abort,
     make_response, url_for, Response)
@@ -40,7 +40,6 @@ def index():
     # handle_settings(request)
     if not session.get('logged_in'):
         return redirect(url_for('login'))
-    scan_running = session.get('scan_started')
     return render_template('index.tmpl')
 
 
@@ -102,8 +101,8 @@ def template_vars():
     handle_settings()
     print("WLAN: ", get_current_wlan())
     return dict(
-        ssid = get_current_wlan(),
-        get_avail_wlans = get_avail_wlans(),
+        ssid=get_current_wlan(),
+        get_avail_wlans=get_avail_wlans(),
     )
 
 

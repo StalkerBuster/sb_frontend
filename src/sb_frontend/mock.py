@@ -31,7 +31,7 @@ def get_current_wlan():
 
 def select_wlan(ssid, password):
     global curr_wlan, uplink_up
-    if not ssid in get_avail_wlans():
+    if ssid not in get_avail_wlans():
         return False
     if password != "123456":
         return False
