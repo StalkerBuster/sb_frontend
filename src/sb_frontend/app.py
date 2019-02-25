@@ -16,12 +16,12 @@
 """Flask app.
 """
 import os, time
-from flask import Flask
-from flask import Flask, flash, redirect, render_template, request, session, abort, make_response, url_for, Response
+from flask import (
+    Flask, flash, redirect, render_template, request, session, abort,
+    make_response, url_for, Response)
 
 app = Flask(__name__)
 app.root_ca_path = None
-app.secret_key = 'StalkerBuster'
 
 
 THEME_PATH = os.path.abspath(
@@ -39,9 +39,11 @@ def index():
     scan_running = session.get('scan_started')
     return render_template('index.tmpl')
 
+
 @app.route('/about')
 def about():
     return render_template('about.tmpl')
+
 
 @app.route('/scan', methods=['POST', 'GET'])
 def scan():
@@ -52,6 +54,7 @@ def scan():
         session['scan_started'] = False
     return render_template('scan.html')
 
+
 @app.route('/results', methods=['POST', 'GET'])
 def results():
     if not session.get('logged_in'):
@@ -60,6 +63,7 @@ def results():
     if "stop" in request.form.keys() or "results" in request.form.keys():
         session['scan_started'] = False
     return render_template('results.html')
+
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
@@ -74,6 +78,7 @@ def login():
         if 'username' in request.form:
             flash('WRONG PASSWORD. TRY AGAIN!')
     return render_template('login.html', error=None)
+
 
 @app.route('/logout')
 def logout():
