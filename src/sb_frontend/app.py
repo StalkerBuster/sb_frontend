@@ -99,7 +99,6 @@ def sb_root_crt():
 @app.context_processor
 def template_vars():
     handle_settings()
-    print("WLAN: ", get_current_wlan())
     return dict(
         ssid=get_current_wlan(),
         get_avail_wlans=get_avail_wlans(),
