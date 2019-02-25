@@ -7,9 +7,9 @@
 <html>
 	<head>
 		<title>StalkerBuster</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="/static/assets/css/main.css" />
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+			<link rel="stylesheet" href="/static/assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -81,17 +81,25 @@
 									<li>
 										<span class="opener"><h4>WLAN</h4></span>
 										<ul>
-											<div class="col-8">Not connected</div>
-
+{% if ssid %}
+											<h4>Connected: "{{ ssid }}"</h4>
+{% else %}
+											<h4>Not connected</h4>
+{% endif %}
 											<form method="post">
-												<div class="row gAAAtr-uniform">
+												<div class="row gtr-uniform">
 													<div class="col-8 col-12-xsmall">
+{% if ssid %}
+														<input type="submit" name="submit-settings-wlan-disconnect" value="Disconnect..." class="btn btn-primary" />
+{% else %}
 														<select name="ssid" id="ssid-select">
-															<option value="ssid_1">My Network</option>
-															<option value="ssid_2">Other Network</option>
+	{% for ssid in get_avail_wlans %}
+															<option value="{{ ssid }}">{{ ssid }}</option>
+	{% endfor %}
 														</select>
 														<input type="password" name="ssid_password" id="ssid-pw" value="" placeholder="WLAN password" />
 														<input type="submit" name="submit-settings-wlan" value="Connect..." class="btn btn-primary primary" />
+{% endif %}
 													</div>
 												</div>
 											</form>

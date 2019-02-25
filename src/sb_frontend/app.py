@@ -19,6 +19,9 @@ import os, time
 from flask import (
     Flask, flash, redirect, render_template, request, session, abort,
     make_response, url_for, Response)
+from sb_frontend.mock import (
+    get_current_wlan, get_avail_wlans, select_wlan, unselect_wlan)
+
 
 app = Flask(__name__)
 app.root_ca_path = None
@@ -32,10 +35,11 @@ TEMPLATES_PATH = os.path.abspath(
         os.path.join(os.path.dirname(__file__), "templates"))
 
 
-@app.route('/')
-def index(methods=['POST', 'GET']):
+@app.route('/', methods=['POST', 'GET'])
+def index():
+    # handle_settings(request)
     if not session.get('logged_in'):
-        return render_template('login.html')
+        return redirect(url_for('login'))
     scan_running = session.get('scan_started')
     return render_template('index.tmpl')
 
@@ -92,3 +96,21 @@ def logout():
 def sb_root_crt():
     return ""
 
+
+@app.context_processor
+def template_vars():
+    handle_settings()
+    print("WLAN: ", get_current_wlan())
+    return dict(
+        ssid = get_current_wlan(),
+        get_avail_wlans = get_avail_wlans(),
+    )
+
+
+def handle_settings():
+    if "submit-settings-wlan" in request.form:
+        select_wlan(
+            request.form.get('ssid'),
+            request.form.get('ssid_password'))
+    if "submit-settings-wlan-disconnect" in request.form:
+        unselect_wlan()
