@@ -101,7 +101,7 @@ def template_vars():
     handle_settings()
     return dict(
         ssid=get_current_wlan(),
-        get_avail_wlans=get_avail_wlans(),
+        avail_wlans=get_avail_wlans(),
     )
 
 

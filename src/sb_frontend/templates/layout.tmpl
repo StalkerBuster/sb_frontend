@@ -93,7 +93,7 @@
 														<input type="submit" name="submit-settings-wlan-disconnect" value="Disconnect..." class="btn btn-primary" />
 {% else %}
 														<select name="ssid" id="ssid-select">
-	{% for ssid in get_avail_wlans %}
+	{% for ssid in avail_wlans %}
 															<option value="{{ ssid }}">{{ ssid }}</option>
 	{% endfor %}
 														</select>
