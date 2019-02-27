@@ -28,4 +28,4 @@ def test_root_cert_empty_by_default():
 def test_app_root_reachable():
     # ensure, the root of our web app can be reached
     resp = app.test_client().get("/")
-    assert resp.status == '200 OK'
+    assert resp.status == '302 FOUND'
