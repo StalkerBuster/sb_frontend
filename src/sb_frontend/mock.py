@@ -20,6 +20,9 @@ Components to simulate real-world hardware env.
 uplink_up = False
 curr_wlan = None
 
+#: sniffing related
+sniffing_dev = None
+
 
 def get_avail_wlans():
     return ["my honeypot", "WifiOnICE", "aiport1"]
@@ -44,3 +47,14 @@ def unselect_wlan():
     global curr_wlan, uplink_up
     curr_wlan = None
     uplink_up = False
+
+
+def start_sniffing(dev):
+    global sniffing_dev
+    sniffing_dev = dev
+    return True
+
+
+def stop_sniffing(dev):
+    global sniffing_dev
+    sniffing_dev = None
