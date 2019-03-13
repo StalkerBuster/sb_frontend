@@ -5,7 +5,9 @@
 		Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 	-->
 <html>
-	<head>
+
+  
+  <head>  
 		<title>StalkerBuster</title>
 			<meta charset="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -18,10 +20,25 @@
 
 			<!-- Main -->
 			<div id="main">
+			  
 				<div class="inner">
 {% if session["logged_in"] %}
-					<p class="actions" align="right"><a href="/logout" class="button">Logout</a></p>
-{% endif %}
+
+	<!-- Menu -->
+					<nav id="menu">
+					  <ul>
+					    <li><a class="active" href="/"><i class= "fa fafw fa-home"></i>Home</a></li>
+					    <li><a class="active" href="/about"><i class="fa fafw fa-info-circle"></i>About</a></li>
+<li><a class="active" href="/"><i class="fa fafw fa-gear"></i>Settings</a></li>				    
+<li style="float:right"><a class="active" href="/logout"><i class="fa fafw fa-sign-out"></i>Logout</a></li>
+</ul>
+</nav>
+
+<!-- <p class="actions" align="right"><a href="/logout" class="button">Logout</a></p>>
+					{% endif %}
+					
+				
+					
 					<!-- Header -->
 					<header id="header">
 						<a class="logo"><img src="/static/images/banner.png" alt="" /></a>
@@ -39,11 +56,11 @@
 {% block body %}{% endblock %}
 
 {% block settings %}
-					<!-- Sidebar -->
+					<!-- Sidebar 
 					<div id="sidebar">
 						<div class="inner">
 
-							<!-- Menu -->
+							<!-- Menu 
 							<nav id="menu">
 								<header class="major">
 									<h2>Settings</h2>
@@ -108,11 +125,12 @@
 
 								</ul>
 							</nav>
-
-							<!-- Footer -->
+>
+							<!-- Footer 
 							<footer id="footer">
 								<p class="copyright">&copy; StalkerBuster. Petra Hagemann and Uli Fouquet GbR. All rights reserved. Design: HTML5 UP.</p>
 							</footer>
+-->
 
 						</div>
 					</div>
