@@ -1,0 +1,85 @@
+ <!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license) -->
+
+	{% extends "layout.tmpl" %}
+{% block body %}
+
+
+<h1>Settings</h1>
+
+										<h4>WLAN</h4>
+										<ul>
+{% if ssid %}
+											<h4>Connected: "{{ ssid }}"</h4>
+{% else %}
+											<h4>Not connected</h4>
+{% endif %}
+											<form method="post">
+												<div class="row gtr-uniform">
+													<div class="col-8 col-12-xsmall">
+{% if ssid %}
+														<input type="submit" name="submit-settings-wlan-disconnect" value="Disconnect..." class="btn btn-primary" />
+{% else %}
+														<select name="ssid" id="ssid-select">
+	{% for ssid in avail_wlans %}
+															<option value="{{ ssid }}">{{ ssid }}</option>
+	{% endfor %}
+														</select>
+														<input type="password" name="ssid_password" id="ssid-pw" value="" placeholder="WLAN password" />
+														<input type="submit" name="submit-settings-wlan" value="Connect..." class="btn btn-primary primary" />
+{% endif %}
+													</div>
+												</div>
+											</form>
+
+
+<br><br>
+											
+<h4>IP</h4>
+											<ul>
+												<h4>Please enter your IP-address</h4>
+		<form method="post" action="#">
+														<div class="row gtr-uniform">
+															<div class="col-8 col-12-xsmall">
+																<input type="text" name="demo-IP" id="demo-IP" value="" placeholder="IP address" />
+															</div>
+														</div>
+												</form>										
+											</ul>
+
+
+<br><br>
+											
+											<h4>DNS</h4>
+
+		<ul>
+											   	<h4>Please enter a DNS:</h4>
+
+													<form method="post" action="#">
+														<div class="row gtr-uniform">
+															<div class="col-8 col-12-xsmall">
+																<input type="text" name="demo-IP" id="demo-IP" value="" placeholder="DNS" />
+															</div>
+																								</div>
+													</form>	
+		</ul>
+
+
+
+
+
+								
+								</ul>
+				</section>
+					</div>
+					</div>
+			
+
+
+
+			
+
+{% endblock %}
