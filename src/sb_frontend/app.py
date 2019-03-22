@@ -42,11 +42,15 @@ def index():
         return redirect(url_for('login'))
     return render_template('index.tmpl')
 
-
 @app.route('/about', methods=['POST', 'GET'])
 def about():
     return render_template('about.tmpl')
 
+@app.route('/settings', methods=['POST', 'GET'])
+def settings():
+    if not session.get('logged_in'):
+        return redirect(url_for('login'))
+    return render_template('settings.tmpl')
 
 @app.route('/scan', methods=['POST', 'GET'])
 def scan():
