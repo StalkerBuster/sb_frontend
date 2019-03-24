@@ -25,16 +25,30 @@
 {% if session["logged_in"] %}
 
 	<!-- Menu -->
-					<nav id="menu">
-					  <ul>
-					    <li><a class="active" href="/"><i class= "fa fafw fa-home"></i>Home</a></li>
-					    <li><a class="active" href="/about"><i class="fa fafw fa-info-circle"></i>About</a></li>
-<li><a class="active" href="/"><i class="fa fafw fa-gear"></i>Settings</a></li>				    
-<li style="float:right"><a class="active" href="/logout"><i class="fa fafw fa-sign-out"></i>Logout</a></li>
-</ul>
+<nav id="menu">
+  <ul>
+    <li><a class="active" href="/"><i class="fa fafw fa-home" style="font-size: 1.5em;"></i></a></li>
+    <li><a class="active" href="/about"><i class="fa fafw fa-info-circle" style="font-size: 1.5em;"></i></a></li>
+    <li><a class="active" href="/settings"><i class="fa fafw fa-gear" style="font-size: 1.5em;"></i></a></li>
+  {% if ssid %}
+    <li><a class="active" href="/settings"><img src="static/images/wifi.svg" width="27">
+    {% else %}
+    <li><a href="/settings"><img src="static/images/wifi-slash.svg" width="27">
+    {% endif %}
+    </a></li>
+
+ {% if session["scan_started"] %}
+    <li><a class="active" href="/scan"><i class="fa fafw fa-play" style="font-size: 1.5em; color: black;"></i>
+    {% else %}
+    <li><a class="active" href="/scan"><i class="fa fafw fa-pause" style="font-size: 1.5em; color: black;"></i>
+    {% endif %}
+    </a></li>
+    
+    <li style="float:right"><a class="active" href="/logout"><i class="fa fafw fa-sign-out" style="font-size: 1.5em;"></i></a></li>
+ </ul>
 </nav>
 
-<!-- <p class="actions" align="right"><a href="/logout" class="button">Logout</a></p>>
+
 					{% endif %}
 					
 				
@@ -56,86 +70,16 @@
 {% block body %}{% endblock %}
 
 {% block settings %}
-					<!-- Sidebar 
-					<div id="sidebar">
-						<div class="inner">
 
-							<!-- Menu 
-							<nav id="menu">
-								<header class="major">
-									<h2>Settings</h2>
-								</header>
-								<ul>
-
-									<li>
-									<span class="opener"><h4>IP</h4></span>
-									<ul>
-										<h4>Please enter your IP-address</h4>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-8 col-12-xsmall">
-													<input type="text" name="demo-IP" id="demo-IP" value="" placeholder="IP address" />
-												</div>
-											</div>
-										</form>
-									</ul>
-									</li>
-
-									<li>
-									<span class="opener"><h4>DNS</h4></span>
-									<ul>
-										<h4>Please enter a DNS:</h4>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-8 col-12-xsmall">
-													<input type="text" name="demo-IP" id="demo-IP" value="" placeholder="DNS" />
-												</div>
-											</div>
-										</form>
-									</ul>
-									</li>
-
-									<li>
-										<span class="opener"><h4>WLAN</h4></span>
-										<ul>
-{% if ssid %}
-											<h4>Connected: "{{ ssid }}"</h4>
-{% else %}
-											<h4>Not connected</h4>
-{% endif %}
-											<form method="post">
-												<div class="row gtr-uniform">
-													<div class="col-8 col-12-xsmall">
-{% if ssid %}
-														<input type="submit" name="submit-settings-wlan-disconnect" value="Disconnect..." class="btn btn-primary" />
-{% else %}
-														<select name="ssid" id="ssid-select">
-	{% for ssid in avail_wlans %}
-															<option value="{{ ssid }}">{{ ssid }}</option>
-	{% endfor %}
-														</select>
-														<input type="password" name="ssid_password" id="ssid-pw" value="" placeholder="WLAN password" />
-														<input type="submit" name="submit-settings-wlan" value="Connect..." class="btn btn-primary primary" />
-{% endif %}
-													</div>
-												</div>
-											</form>
-										</ul>
-									</li>
-
-								</ul>
-							</nav>
->
-							<!-- Footer 
-							<footer id="footer">
-								<p class="copyright">&copy; StalkerBuster. Petra Hagemann and Uli Fouquet GbR. All rights reserved. Design: HTML5 UP.</p>
-							</footer>
--->
 
 						</div>
 					</div>
 {% endblock %} <!-- /settings -->
 
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; StalkerBuster. Petra Hagemann and Uli Fouquet GbR. All rights reserved. Design: HTML5 UP.</p>
+							</footer>
 				</div>
 			</div>
 
