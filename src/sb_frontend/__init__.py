@@ -13,10 +13,11 @@
 #
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-from sb_frontend.app import app
+from sb_frontend.app import app, get_args
 import os
 
 
-def main(args=None):
+def main():
+    args = get_args()
     app.secret_key = os.urandom(12)
-    app.run(debug=True, host='127.0.0.1', port=5000)
+    app.run(debug=True, host=args.host, port=args.port)

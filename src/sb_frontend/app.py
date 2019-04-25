@@ -16,11 +16,20 @@
 """Flask app.
 """
 import os
+import argparse
 from flask import (
     Flask, flash, redirect, render_template, request, session, abort,
     make_response, url_for, Response)
 from sb_frontend.mock import (
     get_current_wlan, get_avail_wlans, select_wlan, unselect_wlan)
+
+#Argument Parser for setting port and host
+def get_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-p', '--port', help='the port StalkerBuster binds to', default=5000, type=int)
+    parser.add_argument('--host', help='the host StalkerBuster is running', default='localhost')
+    args = parser.parse_args()
+    return args
 
 
 app = Flask(__name__)
